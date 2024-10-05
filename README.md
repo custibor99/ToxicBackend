@@ -46,8 +46,9 @@ Python is the core programming language for the project, utilizing several key l
 **Streamlit:** This Python-based framework will be used to create the final web-based application where users can input SMILES strings to predict the toxicity of molecules in real time. Streamlit is easy to integrate with Python models and offers a fast way to build interactive applications without needing extensive web development experience.
 
 ## Work Breakdown
+<div align="center">
 
-| **Task**                             |**Hours**|
+| **Task** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|**Hours** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
 |--------------------------------------|-------|
 | Dataset Collection and Preprocessing | 5     |
 | Preparing classical Models           | 5     |
@@ -59,6 +60,7 @@ Python is the core programming language for the project, utilizing several key l
 |                                      |       |
 | **Total**                            | **75**|
 
+</div>
 
 
 ## References
