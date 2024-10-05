@@ -4,16 +4,16 @@
 Toxicology prediction of chemical compounds is a critical step in pharmaceutical research, environmental safety, and chemical engineering. Predicting whether a molecule will exhibit toxic properties helps reduce the time, cost, and risk associated with developing new drugs or assessing environmental hazards. Traditionally, classical machine learning (ML) methods such as random forests, support vector machines (SVMs), and decision trees have been widely used for molecular toxicity prediction. However, the recent rise of graph neural networks (GNNs) presents a new approach that can potentially outperform classical methods due to their ability to capture complex graph structures of molecules. This project aims to investigate whether GNNs can outperform classical ML methods in predicting molecular toxicity by leveraging the inherent graph structure of molecules.
 
 ## Data Description
-I will use the Tox21[3], ClinTox[4] and Comprehensive chemical compounds [5] datasets.  The Tox21 dataset consists of molecular compounds labeled with their toxicological effects based on 12 different toxicity types. ClinTox contains molecular compunds and whether or not a compound failed clinical phase trials. The final dataset only contains mulecular structures and no toxicology enpoints as its primary use will be for unsupervised model training.
+I will use the Tox21[3], ClinTox[4], and Comprehensive chemical compounds [5] datasets.  The Tox21 dataset consists of molecular compounds labeled with their toxicological effects based on 12 different toxicity types. ClinTox contains molecular compounds and whether or not a compound failed clinical phase trials. The final dataset only contains molecular structures and no toxicology endpoints as its primary use will be for unsupervised model training.
 
 The molecules are represented using SMILES (Simplified Molecular Input Line Entry System), which can be converted into graph structures. An example of a smile representation:
 
-<div style="text-align:center;"> 
-<p style="font-size: 26px;" >Clc(c(Cl)c(Cl)c1C(=O)O)c(Cl)c1Cl</p>
-</div>
+<p align="center">
+<b>Clc(c(Cl)c(Cl)c1C(=O)O)c(Cl)c1Cl</b>
+</p>
 The same molecule can be represented in different smile formats, which is why we will standardize them using MolVS [7]
 
-Pased on a molecules SMILE we can calculate statistical descriptors, for that wer will use Rdkit[6]. Rdkit can also be used to calculate Morgan fingerprints which is a form of vector representation of chemical compounds. Both Morgan fingerprints and Statistical descriptors will be used as features for Traditional ML methods.
+Based on a molecule's SMILE we can calculate statistical descriptors, for that, we will use Rdkit[6]. Rdkit can also be used to calculate Morgan fingerprints which is a form of vector representation of chemical compounds. Both Morgan fingerprints and Statistical descriptors will be used as features for Traditional ML methods.
 
 The datasets contain the following features
 ### Tox21
@@ -31,34 +31,34 @@ The datasets contain the following features
 - **Input Features:** SMILES representation of molecules & molecule weight.
 - **Target Variables:** None
 
-The dataset splits will follow the splits in Sharma[1] so that our results can also be compared to state of the art methods, even tho that is not the goal of this project. 
+The dataset splits will follow the splits in Sharma[1] so that our results can also be compared to state-of-the-art methods, even tho that is not the goal of this project. 
 
 ## Technologies used
 ### Python and Libraries
 Python is the core programming language for the project, utilizing several key libraries:
 
 - **PyTorch** and **PyTorch Geometric (PyG)**: Used to design, build, and train graph neural networks (GNNs) efficiently, especially for handling graph data.
-- **Scikit-learn (sklearn)**: Employed for implementing classical machine learning models (Random Forest, SVM) to benchmark against GNN performance.
+- **Scikit-learn (sklearn)**: Employed to implement classical machine learning models (Random Forest, SVM) to benchmark against GNN performance.
 - **RDKit and MolVS**: Essential for processing chemical data, converting SMILES to graph representations, and ensuring consistency in molecular structures.
 ### Database and Storage
 **PostgreSQL** with **Pgvector Extension**: Used to store molecular data, model outputs, and graph embeddings. Pgvector allows efficient storage and querying of vector data.
 ### Application Framework
-**Streamlit:** This Python-based framework will be used to create the final web-based application where users can input SMILES strings to predict the toxicity of molecules in real-time. Streamlit is easy to integrate with Python models and offers a fast way to build interactive applications without needing extensive web development experience.
+**Streamlit:** This Python-based framework will be used to create the final web-based application where users can input SMILES strings to predict the toxicity of molecules in real time. Streamlit is easy to integrate with Python models and offers a fast way to build interactive applications without needing extensive web development experience.
 
 ## Work Breakdown
 
-<table  width="100%">
-<tr><th>Task</th><th>Hours</th></tr>
-<tr><td>Dataset Collection and Preprocessing</td><td>5</td></tr>
-<tr><td>Preparing classical Models</td><td>5</td>/tr>
-<tr><td>Model Design and Implementation</td><td>15</td></tr>
-<tr><td>Model Training and Fine-Tuning</td><td>15</td></tr>
-<tr><td>Model Evaluation and Comparison</td><td>10</td></tr>
-<tr><td>Application Development</td><td>15</td></tr>
-<tr><td>Report Writing and Presentation</td><td>10</td></tr>
-<tr><th></th><th></th></tr>
-<tr style='font-weight:bold;'><td >Total</td><td>75</td></tr>
-</table>
+| **Task**                             |**Hours**|
+|--------------------------------------|-------|
+| Dataset Collection and Preprocessing | 5     |
+| Preparing classical Models           | 5     |
+| Model Design and Implementation      | 15    |
+| Model Training and Fine-Tuning       | 15    |
+| Model Evaluation and Comparison      | 10    |
+| Application Development              | 15    |
+| Report Writing and Presentation      | 10    |
+|                                      |       |
+| **Total**                            | **75**|
+
 
 
 ## References
