@@ -50,12 +50,13 @@ Python is the core programming language for the project, utilizing several key l
 
 | **Task** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|**Hours** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
 |--------------------------------------|-------|
+| Research and Project Planning        | 5     |
 | Dataset Collection and Preprocessing | 5     |
 | Preparing classical Models           | 5     |
 | Model Design and Implementation      | 15    |
 | Model Training and Fine-Tuning       | 15    |
 | Model Evaluation and Comparison      | 10    |
-| Application Development              | 15    |
+| Application Development              | 10    |
 | Report Writing and Presentation      | 10    |
 |                                      |       |
 | **Total**                            | **75**|
