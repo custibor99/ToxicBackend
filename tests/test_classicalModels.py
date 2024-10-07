@@ -1,4 +1,4 @@
-from toxicbygnn.model.classicalModels import RandomModel
+from toxicbygnn.models.classicalModels import RandomModel
 import numpy as np
 import pytest
 

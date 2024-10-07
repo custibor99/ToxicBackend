@@ -1,4 +1,4 @@
-from toxicbygnn.model.BaseModel import BaseModel
+from toxicbygnn.models.BaseModel import BaseModel
 import numpy as np
 from pathlib import Path
 import random as rnd
