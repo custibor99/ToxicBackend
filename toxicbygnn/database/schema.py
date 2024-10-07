@@ -3,7 +3,11 @@ from sqlalchemy.orm import declarative_base
 from pgvector.sqlalchemy import Vector
 from datetime import datetime
 
+FINGERPRINT_SIZE = 2048
+DESCRIPTORS_SIZE = 210
+
 Base = declarative_base()
+
 
 class Chemical(Base):
     __tablename__ = 'chemical'
@@ -15,14 +19,14 @@ class Descriptors(Base):
     __tablename__ = 'descriptors'
     id = mapped_column(Integer, primary_key=True)
     chemicalId = mapped_column(Integer(), nullable=False, unique=True)
-    descriptor = mapped_column(Vector(210))
+    descriptor = mapped_column(Vector(DESCRIPTORS_SIZE)) #MAKE SPARSE
     raise NotImplementedError("Add relations")
 
 class Fingerprint():
     __tablename__ = 'fingerprints'
     id = mapped_column(Integer, primary_key=True)
     chemicalId = mapped_column(Integer(), nullable=False, unique=True)
-    fingerprint = mapped_column(Vector(2048))
+    fingerprint = mapped_column(Vector(FINGERPRINT_SIZE))
     raise NotImplementedError("Add relations")
 
 class Model():
