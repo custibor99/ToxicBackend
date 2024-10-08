@@ -34,7 +34,7 @@ if POSTGRES_INIT:
         metadata.drop_all(bind=conn)
         metadata.create_all(bind=conn, checkfirst=True)
 
-        with open("toxicbygnn/database/migration.sql", "r") as file:
+        with open("resources/migration.sql", "r") as file:
             for line in file:
                 conn.execute(text(line))
                 conn.commit()
