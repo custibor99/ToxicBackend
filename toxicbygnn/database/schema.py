@@ -33,9 +33,9 @@ class Endpoint(Base):
 class Model(Base):
     __tablename__ = 'model'
     id = mapped_column(Integer, primary_key=True)
-    endpointId = mapped_column(ForeignKey("endpoint.id"), nullable=False)
     name = mapped_column(String(255), nullable=False)
-    type = mapped_column(Enum("classic", "deep", name="type_enum"))
+    endpointId = mapped_column(ForeignKey("endpoint.id"), nullable=False)
+
 
 class Prediction(Base):
     __tablename__ = "prediction"
