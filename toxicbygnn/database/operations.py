@@ -25,16 +25,5 @@ endpoints = [
 ]
 
 
-createAllEntitites(endpoints)
-created = getAllFromTable(Endpoint)
-
-models = [
-    Model(name="RandomModel", endpointId=el.id)
-    for el in created
-]
-createAllEntitites(models)
-model = getAllFromTable(Model)[0]
-print(model, type(model))
-
 
 

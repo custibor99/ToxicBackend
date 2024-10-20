@@ -17,17 +17,17 @@ class PredictionPipeline:
         X = self.preprocessor.getMoleculesFromSmiles(X)
         X = self.preprocessor.getDescriptorsFromMol(X)
 
-        result = {"smiles" : smiles}
+        result = {
+            "smile" : [],
+            "model" : [],
+            "prediction": []
+            }
         print(f"Start processing {len(self.classical_models)} classical models")
         for i, model in enumerate(self.classical_models):
             print(f"\t{i+1}. {model.name}")
             pred = model.predictBatch(X)
-            result[model.name] = pred
-
-        print(f"Start processing {len(self.deep_models)} deep models")
-        for i, model in enumerate(self.deep_models):
-            print(f"\t{i+1}. {model.name}")
-            pred = model.predictBatch(X)
-            result[model.name] = pred
+            result["prediction"] += pred
+            result["model"] += [model.name] * len(smiles)
+            result["smile"] += smiles
     
         return pd.DataFrame(result).head()
